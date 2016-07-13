@@ -5,8 +5,8 @@ class all_ads_model extends CI_Model{
 		
 		$this->db->select('*');
 		$this->db->from('all_ads');
-		$this->db->join('cities', 'cities.city_id = all_ads.city_id');
-		$this->db->join('types', 'types.type_id = all_ads.type_id');
+		$this->db->join('cities', 'cities.id_city = all_ads.id_city');
+		$this->db->join('types', 'types.id_type = all_ads.id_type');
 		
 		$this->db->where('all_ads.date_deleted =', NULL);
 		
@@ -20,8 +20,8 @@ class all_ads_model extends CI_Model{
 		$all_ads = array(
 			'description' =>$this->input->post('description'),
 			'price' => $this->input->post('price'),
-			'city_id' => $this->input->post('city'),
-			'type_id' => $this->input->post('type')
+			'id_city' => $this->input->post('city'),
+			'id_type' => $this->input->post('type')
 			);
 
 		return $this->db->insert('all_ads', $all_ads);
@@ -31,7 +31,7 @@ class all_ads_model extends CI_Model{
   public function get_all_ads($id){
 		$this->db->select('*');
 		$this->db->from('all_ads');
-		$this->db->where('all_ads_id', $id);
+		$this->db->where('id_all_ads', $id);
 		$q = $this->db->get();
 		return $result = $q->row();
 	}
@@ -41,8 +41,8 @@ class all_ads_model extends CI_Model{
 		$all_ads = array(
 			'description' =>$this->input->post('description'),
 			'price' => $this->input->post('price'),
-			'city_id' => $this->input->post('city'),
-			'type_id' => $this->input->post('type')
+			'id_city' => $this->input->post('city'),
+			'id_type' => $this->input->post('type')
 			);
 		
 		$this->db->where('id_all_ads', $id);
