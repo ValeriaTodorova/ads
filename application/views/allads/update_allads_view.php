@@ -1,6 +1,6 @@
 <?php 
 /*echo "<pre>";
-var_dump($all_ads_info);
+var_dump($allads_info);
 echo "</pre>";*/
 
 //echo "<pre>";
@@ -12,12 +12,12 @@ echo "</pre>";*/
 //echo "</pre>";
 
 echo validation_errors();
-echo form_open('all_ads/update-all_ads/'.$all_ads_info->id_all_ads);
+echo form_open('allads/update-allads/'.$allads_info->id_allads);
 
 //id
 $data_id = array(
-        'name'          => 'id_all_ads',
-        'value'         => $all_ads_info->id_all_ads       
+        'name'          => 'id_allads',
+        'value'         => $all_adsinfo->id_allads       
 );
 
 echo form_hidden($data_id);
@@ -26,14 +26,14 @@ echo form_hidden($data_id);
 echo "<p>Update add description</p>";
 $data_description = array(
         'name'          => 'description',
-        'value'         => $all_ads_info->description       
+        'value'         => $allads_info->description       
 );
 echo form_input($data_description);
 //update price
 echo "<p>Update resource price</p>";
 $data_price = array(
         'name'          => 'price',
-        'value'         => $all_ads_info->price       
+        'value'         => $allads_info->price       
 );
 echo form_input($data_price);
 //update city_id
@@ -48,7 +48,7 @@ echo "<p>".form_dropdown('cities', $options_cities)."</p>";
 
 $data_city = array(
         'name'          => 'cities',
-        'value'         => $all_ads_info->id_city     
+        'value'         => $allads_info->id_city     
 );
 //update type_id
 echo "<p>Update type</p>";
@@ -62,7 +62,7 @@ echo "<p>".form_dropdown('types', $options_types)."</p>";
 
 $data_type = array(
         'name'          => 'types',
-        'value'         => $all_ads_info->id_type        
+        'value'         => $allads_info->id_type        
 );
 //echo form_textarea($data_sent_mess);
 

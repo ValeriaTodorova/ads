@@ -56,6 +56,6 @@ $route['default_controller'] = 'user';
 >>>>>>> origin/master
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;*/
-$route['default_controller'] = 'all_ads';
+$route['default_controller'] = '';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = TRUE;

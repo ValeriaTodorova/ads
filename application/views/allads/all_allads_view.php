@@ -12,7 +12,7 @@ echo "<tr>";
 	echo "<td>City</td>";
 	echo "<td>Type</td>";
 	echo "</tr>";
-foreach($all_all_ads as $key => $value){
+foreach($all_allads as $key => $value){
 	echo "<tr>";
 	echo '<td>'.$i++.'</td>';
 	echo "<td>";
@@ -28,10 +28,10 @@ foreach($all_all_ads as $key => $value){
 	echo $value['type_name'];
 	echo "</td>";
 	
-	echo "<td>".anchor('all_ads/show-update-all_ads/?id='.$value['id_all_ads'], 'Update')."</td>";
-	echo "<td>".anchor('all_ads/del-all_ads/?id='.$value['id_all_ads'], 'Delete')."</td>";
+	echo "<td>".anchor('allads/show-update-allads/?id='.$value['id_allads'], 'Update')."</td>";
+	echo "<td>".anchor('allads/del-allads/?id='.$value['id_allads'], 'Delete')."</td>";
 	echo "</tr>";
 }
 echo "</table>";
 
-echo anchor('all_ads/insert-all_ads/', 'Add new add');
+echo anchor('allads/insert-allads/', 'Add new add');
