@@ -50,22 +50,8 @@ class allads extends CI_controller{
             $this->allads_model->add_allads();
 
             echo "Successfully inserted a new resource in DB!";
-  //   public function insert_allads(){
 
-		// $this->form_validation->set_rules('description', 'description', 'required');
-  //       $this->form_validation->set_rules('price', 'price', 'required');
-				
- 	// 	if($this->form_validation->run() === FALSE)
- 	// 	{
-	 // 	     $this->show_add_allads();
- 	// 	}
- 	// 	else
- 	// 	{
- 	// 		$this->allads_model->add_allads();
-
- 	// 		echo "Successfully inserted a new add in DB!";
-
- 			
+ 			//view for file upload instead of all addsS
  			$data['dynamic_view'] = 'allads/view_db';
         	$data['description'] = 'Insert add';
 
@@ -73,6 +59,11 @@ class allads extends CI_controller{
  			
 		}
 	}
+    public function addPhoto(){
+        //here validate the photo upload
+        //on success load $data['dynamic_view'] = 'allads/view_db';
+        //on fault load the add photo view again
+    }
 //update
 	public function show_update_allads(){
        	$id = $_GET['id'];
