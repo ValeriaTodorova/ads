@@ -12,7 +12,7 @@ echo validation_errors();
 
 echo "<h1>Insert new add</h1>";
 
-echo form_open('all_ads/insert-all_ads');
+echo form_open('allads/insert-allads');
 
 echo"<p>Enter a add description</p>";
 echo form_input('description');
