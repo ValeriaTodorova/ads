@@ -1,6 +1,6 @@
 <?php
 //echo "<pre>";
-//var_dump($all_all_ads);
+//var_dump($all_allads);
 //echo "</pre>";
 
 $i = 1;

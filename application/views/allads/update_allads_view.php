@@ -17,7 +17,7 @@ echo form_open('allads/update-allads/'.$allads_info->id_allads);
 //id
 $data_id = array(
         'name'          => 'id_allads',
-        'value'         => $all_adsinfo->id_allads       
+        'value'         => $allads_info->id_allads       
 );
 
 echo form_hidden($data_id);
@@ -30,7 +30,7 @@ $data_description = array(
 );
 echo form_input($data_description);
 //update price
-echo "<p>Update resource price</p>";
+echo "<p>Update price</p>";
 $data_price = array(
         'name'          => 'price',
         'value'         => $allads_info->price       

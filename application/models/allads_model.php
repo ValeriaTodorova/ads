@@ -20,8 +20,8 @@ class allads_model extends CI_Model{
 		$allads = array(
 			'description' =>$this->input->post('description'),
 			'price' => $this->input->post('price'),
-			'id_city' => $this->input->post('city'),
-			'id_type' => $this->input->post('type')
+			'id_city' => $this->input->post('cities'),
+			'id_type' => $this->input->post('types')
 			);
 
 		return $this->db->insert('allads', $allads);
@@ -41,8 +41,8 @@ class allads_model extends CI_Model{
 		$allads = array(
 			'description' =>$this->input->post('description'),
 			'price' => $this->input->post('price'),
-			'id_city' => $this->input->post('city'),
-			'id_type' => $this->input->post('type')
+			'id_city' => $this->input->post('cities'),
+			'id_type' => $this->input->post('types')
 			);
 		
 		$this->db->where('id_allads', $id);

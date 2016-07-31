@@ -1,3 +1,3 @@
 <?php
 
-echo "<p>".anchor('all_ads/index', 'View DB')."</p>";
+echo "<p>".anchor('allads/index', 'View DB')."</p>";
